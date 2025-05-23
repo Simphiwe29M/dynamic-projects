@@ -1,0 +1,102 @@
+/* Top Bar Styling */
+.top-bar {
+ background-color: #f6ba0595; /* Light blue background */
+ color: #fff; /* White text */
+ padding: 5px 20px; /* Padding */
+ font-size: 0.9em; /* Font size */
+ display: flex;
+ justify-content: space-between; /* Distribute space between items */
+ align-items: center; /* Vertically align items */
+ flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.top-bar div {
+ display: flex;
+ align-items: center;
+}
+
+.top-bar div i {
+ margin-right: 5px; /* Space between icon and text */
+}
+
+.top-bar a {
+ color: #fff; /* White link color */
+ text-decoration: none;
+}
+
+.top-bar marquee {
+ flex-grow: 1; /* Allow marquee to take up available space */
+ margin: 0 10px; /* Add margin around marquee */
+}
+
+/* Header Styling */
+header {
+ background-color: #f8f9fa; /* Light background */
+ padding: 10px 0;
+ border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+ display: flex; /* Use flexbox */
+ justify-content: center; /* Center the flex items */
+ align-items: center; /* Vertically center logo and navigation */
+ flex-wrap: wrap; /* Make it wrap on small screens */
+}
+
+.logo img {
+ height: 100px; /* Adjust logo height as needed */
+ margin-right: 20px; /* Add some space to the right of the logo */
+}
+
+nav ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex; /* Use flexbox */
+ justify-content: flex-end; /* Align links to the right */
+ flex-wrap: wrap; /* Allow wrapping on smaller screens */
+ align-items: center;
+}
+
+nav ul li {
+ margin: 0 10px; /* Added margin between list items */
+}
+
+nav ul li a {
+ text-decoration: none;
+ color: #555; /* Slightly lighter link color */
+ font-weight: bold;
+ padding: 20px; /* Added padding */
+ font-size: 1.1em; /* Slightly larger font */
+ transition: color 0.3s ease;
+ position: relative; /* For underline effect */
+}
+
+nav ul li a:hover {
+ color: #007bff; /* Hover color */
+}
+
+nav ul li a::after {
+ content: '';
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ width: 0;
+ height: 3px; /* Thicker underline */
+ background-color: #007bff;
+ transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+ width: 100%;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+ .header-content,
+ nav ul {
+ flex-direction: column; /* Stack items vertically */
+ }
+}
+
+

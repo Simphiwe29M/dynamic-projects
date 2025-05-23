@@ -1,0 +1,258 @@
+/* Top Bar Styling */
+.top-bar {
+ background-color: #f6ba0595; /* Orange color */
+ color: #fff; /* White text */
+ padding: 5px 20px; /* Adjusted padding */
+ font-size: 0.9em; /* Font size */
+ display: flex;
+}
+
+/* Header Styling */
+header {
+ background-color: #f8f9fa; /* Light background */
+ padding: 10px 0;
+ border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+ display: flex; /* Use flexbox */
+ justify-content: center; /* Center the flex items */
+ align-items: center; /* Vertically center logo and contact info */
+ flex-wrap: wrap; /* Make it wrap on small screens */
+}
+
+.logo img {
+ height: 100px; /* Adjust logo height as needed */
+ margin-right: 20px; /* Add some space to the right of the logo */
+}
+/* Basic Reset and Body Styles */
+body {
+ font-family: 'Open Sans', sans-serif;
+ margin: 0;
+ line-height: 1.6;
+ color: #333;
+ background-color: #f0f2f5;
+ max-width: 1200px; /* Set a maximum width for the content */
+ margin: 0 auto; /* Center the body horizontally */
+}
+
+
+header h1 {
+    margin: 0; /* Reset margin for the title */
+    color: #1a73e8; /* A shade of blue similar to the example */
+ font-size: 2em; /* Slightly larger title */
+ display: inline-block;
+ vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+ padding: 0;
+    margin: 0;
+ display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align links to the right */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+}
+
+nav ul li {
+ margin: 0 10px; /* Added margin for padding */
+}
+
+nav ul li a {
+    text-decoration: none;
+ color: #555; /* Slightly lighter link color */
+    font-weight: bold;
+ padding: 10px 0; /* More padding */
+ padding: 20px; /* Added 20px padding */
+    font-size: 1.1em; /* Slightly larger font */
+    transition: color 0.3s ease;
+    position: relative; /* For underline effect */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Hover color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+ height: 3px; /* Thicker underline */
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero { /* Add a class hero to your hero section */
+    position: relative;
+ display: flex; /* Use flexbox for layout */
+ align-items: center; /* Vertically align items */
+    padding: 40px 20px; /* Adjust padding as needed */
+    background-color: #a0b4d1; /* Example background color */
+ color: #fff; /* White text color */
+}
+
+.hero img { /* Style for the image within the hero section */
+    max-width: 40%; /* Adjust width as needed */
+ margin-right: 30px; /* Add space between image and text */
+}
+
+.hero .hero-content h2 { /* Style for the heading within the content */
+    margin-top: 40px; /* Add some margin at the top */
+    font-size: 3em; /* Larger font size for the title */
+    z-index: 2;
+    position: relative;
+ text-align: center; /* Center the text horizontally */
+    padding: 0; /* Remove padding */
+}
+
+/* Style for the bullet points */
+.hero .hero-content ul {
+    list-style: disc; /* Use standard disc bullet points */
+    margin: 20px auto; /* Center the list and add some margin */
+    max-width: 800px; /* Limit the width of the list */
+    text-align: left; /* Align the text to the left */
+}
+
+.hero .hero-content ul li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+section h2 {
+ color: #1a73e8; /* Section title color, matching header h1 */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+ font-weight: 600;
+ /* Add specific styling for the 'Vision' section */
+}
+
+/* Latest News Section Styling to match second image */
+.latest-news-section {
+    padding: 40px 20px; /* Keep similar padding */
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 2rem;
+}
+
+.latest-news-section h2 {
+    background-color: #8A2BE2; /* Purple background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+ display: block; /* Make it a block element to center with margin auto */
+ margin: 20px auto 0; /* Center horizontally and add space above */
+}
+/* Gallery/Projects Section */
+.gallery-grid {
+    display: grid; /* Use grid for gallery layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 200px; /* Fixed height for gallery images */
+    border-radius: 5px;
+    object-fit: cover; /* Ensure images cover the area */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s ease;
+}
+.gallery-grid .gallery-item {
+    margin-bottom: 15px;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Slider Controls */
+.slider-controls {
+ background: none;
+ display: flex;
+ justify-content: space-between; /* Push buttons to the ends */
+ align-items: center;
+ position: absolute;
+ width: 100%;
+ top: 50%;
+ transform: translateY(-50%); /* Vertically center the buttons */
+}
+
+/* Contact Section */
+.contact-info p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact-info a {
+    color: #1a73e8;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em; /* Larger font size */
+    margin-bottom: 10px;
+}
+
+/* Styling for the individual items in the top bar */
+@media (max-width: 576px) {
+ .header-content {
+ flex-direction: column; /* Stack logo and contact info vertically on extra-small screens */
+ text-align: center;
+ }
+ .contact-info {
+ justify-content: center; /* Center contact info items on extra-small screens */
+ }
+ .logo img{
+ .slider-controls button {
+ position: absolute; /* Position relative to the slider container */
+ top: 50%; /* Align to the middle vertically */
+ transform: translateY(-50%); /* Adjust position for perfect vertical centering */
+ z-index: 10;
+ padding: 10px; /* Add padding around the icons */
+ cursor: pointer; /* Change cursor on hover */
+ }
+    }
+}
+
+/* Circular border for the footer image and positioning */
+.footer-bottom img{
+
+}
+
+@media (max-width: 992px) { /* Adjust breakpoint */
+ header {
+ flex-direction: column; /* Stack items vertically */
+ header h1 {
+ margin-bottom: 10px;
+ }
+
+ /* Adjust hero section layout for smaller screens */
+ .hero {
+ flex-direction: column; /* Stack the image and content */
+ }
+
+ .top-bar .info-item {
+ margin: 5px 0;
+ }
+    nav ul { /* Adjust navigation for smaller screens */
+ flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+        margin-top: 10px;
+ }
+    nav ul li {
+ margin: 5px 0; /* Adjust margin for stacked links */
+ }
+}

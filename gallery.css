@@ -1,0 +1,202 @@
+/* Top Bar Styling */
+.top-bar {
+  background-color: #e57373; /* A shade of red resembling fire */
+  color: #fff; /* White text */
+  padding: 5px 20px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header Styling */
+header {
+  background-color: #f8f9fa; /* Light background */
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 576px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+}
+
+#gallery-content h2 {
+  clear: both;
+}
+
+.gallery-title {
+ text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.gallery-container {
+ display: flex;
+ flex-wrap: wrap; /* Allows images to wrap to the next line */
+ justify-content: center; /* Centers images horizontally */
+  gap: 20px; /* Space between images */
+  max-width: 1200px; /* Optional: Limit gallery width */
+  margin: 0 auto; /* Center the gallery container */
+}
+
+.gallery-container img {
+ width: 300px; /* Adjust as needed */
+ height: 200px; /* Adjust as needed */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+ cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-container img:hover {
+ transform: scale(1.03);
+}
+
+/* Fullscreen Overlay Styles */
+.fullscreen-overlay {
+ display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fullscreen-overlay.active {
+ display: flex; /* Show when active */
+}
+
+.fullscreen-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Ensures the entire image is visible */
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+ top: 20px;
+ right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+    z-index: 1001; /* Ensure it's above the image */
+}
+
+/* Show modal */
+.modal.show {
+ display: block;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80% !important;
+  max-height: 80% !important;\n}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;\n  height: 150px;\n}
+
+/* The Close Button */
+.close {\n  position: absolute;\n  top: 15px;\n  right: 35px;\n  color: #f1f1f1;\n  font-size: 40px;\n  font-weight: bold;\n  transition: 0.3s;\n}
+
+.close:hover,\n.close:focus {\n  color: #bbb;\n  text-decoration: none;\n  cursor: pointer;\n}

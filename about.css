@@ -1,0 +1,118 @@
+/* Top Bar Styling */
+.top-bar {
+  background-color: #a0b4d1; /* Light blue background */
+  color: white; /* White text */
+  padding: 5px 20px; /* Padding */
+  font-size: 0.9em; /* Font size */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Distribute items with space between */
+  align-items: center; /* Vertically align items */
+}
+
+/* Header Styling */
+header {
+  background-color: #f8f9fa; /* Light background */
+  padding: 10px 0; /* Padding */
+  border-bottom: 1px solid #ddd; /* Bottom border */
+}
+
+.header-content {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the flex items */
+  align-items: center; /* Vertically center logo and contact info */
+  flex-wrap: wrap; /* Make it wrap on small screens */
+}
+
+.logo img {
+  height: 100px; /* Adjust logo height as needed */
+  margin-right: 20px; /* Add some space to the right of the logo */
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox */
+  justify-content: flex-end; /* Align links to the right */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  align-items: center; /* Vertically align items */
+}
+
+nav ul li {
+  margin: 0 10px; /* Added margin for spacing between links */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #555; /* Link color */
+  font-weight: bold; /* Bold font weight */
+  padding: 10px 20px; /* Padding around links */
+  font-size: 1.1em; /* Slightly larger font size */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+  position: relative; /* For underline effect */
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Hover color */
+}
+
+nav ul li a::after {
+  content: ''; /* Required for the pseudo-element */
+  position: absolute; /* Position relative to the link */
+  left: 0; /* Start from the left */
+  bottom: 0; /* Position at the bottom */
+  width: 0; /* Initial width is zero */
+  height: 3px; /* Thicker underline */
+  background-color: #007bff; /* Underline color */
+  transition: width 0.3s ease; /* Smooth width transition on hover */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Expand underline to full width on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  header h1 {
+    margin-bottom: 10px; /* Add margin below heading */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: center; /* Center navigation items */
+    margin-top: 10px; /* Add margin above navigation */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Adjust margin for stacked links */
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content {
+    flex-direction: column; /* Stack logo and contact info vertically on extra-small screens */
+    text-align: center; /* Center text */
+  }
+
+  .contact-info {
+    justify-content: center; /* Center contact info items on extra-small screens */
+  }
+
+  .logo img {
+    margin-bottom: 10px; /* Add margin below logo */
+  }
+
+  .top-bar {
+    flex-direction: column; /* Stack top bar items */
+    text-align: center; /* Center text */
+  }
+
+  .top-bar > div {
+    margin-bottom: 5px; /* Add margin between stacked top bar items */
+  }
+}
